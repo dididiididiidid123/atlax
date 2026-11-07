@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="leaf" x1="256" y1="84" x2="256" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9fbe6"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep navy tile -->
+  <rect width="512" height="512" rx="112" fill="#0b2545"/>
+
+  <!-- Faint coin ring, the only money hint -->
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="10"/>
+
+  <g transform="translate(0 -12)">
+    <!-- Stem -->
+    <path d="M256 398 V 440" stroke="#86efac" stroke-width="12" stroke-linecap="round"/>
+    <!-- Leaf body -->
+    <path fill="url(#leaf)" d="M256 96 C 360 180 380 300 256 400 C 132 300 152 180 256 96 Z"/>
+    <!-- Vein drawn as a checkmark (done, simple) -->
+    <path d="M200 262 L 240 302 L 316 220" fill="none" stroke="#0b2545" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

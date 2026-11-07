@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Solid deep-blue tile -->
+  <rect width="512" height="512" rx="96" fill="#0a2540"/>
+
+  <!-- One faint coin hint, top-right -->
+  <circle cx="392" cy="120" r="44" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="8"/>
+
+  <!-- Leaf-shaped letter A, flat mint -->
+  <path fill="#86efac" d="
+    M256 100
+    C 300 146 356 240 356 412
+    L 298 412
+    C 294 330 282 280 256 238
+    C 230 280 218 330 214 412
+    L 156 412
+    C 156 240 212 146 256 100 Z"/>
+
+  <!-- Crossbar -->
+  <rect x="196" y="322" width="120" height="22" fill="#86efac"/>
+
+  <!-- Midrib slit, in background colour -->
+  <rect x="251" y="150" width="10" height="76" rx="5" fill="#0a2540"/>
+</svg>

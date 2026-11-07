@@ -1,0 +1,364 @@
+﻿@import './theme-vars.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================================
+   MODE GELAP
+   Warna memakai variabel (theme-vars.css), jadi sebagian besar sudah otomatis.
+   Di bawah ini hanya penyesuaian untuk latar putih dan tombol solid.
+   ===================================================================== */
+html.dark body {
+  background-color: rgb(var(--c-slate-50));
+}
+html.dark .bg-white,
+html.dark .card,
+html.dark .field,
+html.dark .btn-secondary {
+  background-color: rgb(var(--c-slate-100));
+}
+html.dark .bg-slate-900 {
+  background-color: rgb(var(--c-brand-600));
+}
+/* Latar pastel (kartu, banner, chip) di mode gelap: dibuat redup dan dicampur ke latar,
+   supaya tidak terlihat cokelat atau neon. Teks dan garisnya tetap berwarna. */
+html.dark .bg-amber-50 { background-color: color-mix(in srgb, rgb(var(--c-amber-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-rose-50 { background-color: color-mix(in srgb, rgb(var(--c-rose-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-violet-50 { background-color: color-mix(in srgb, rgb(var(--c-violet-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-teal-50 { background-color: color-mix(in srgb, rgb(var(--c-teal-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-sky-50 { background-color: color-mix(in srgb, rgb(var(--c-sky-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-emerald-50 { background-color: color-mix(in srgb, rgb(var(--c-emerald-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-indigo-50 { background-color: color-mix(in srgb, rgb(var(--c-indigo-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-brand-50 { background-color: color-mix(in srgb, rgb(var(--c-brand-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-blue-50 { background-color: color-mix(in srgb, rgb(var(--c-blue-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-orange-50 { background-color: color-mix(in srgb, rgb(var(--c-orange-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-pink-50 { background-color: color-mix(in srgb, rgb(var(--c-pink-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-cyan-50 { background-color: color-mix(in srgb, rgb(var(--c-cyan-100)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-amber-100 { background-color: color-mix(in srgb, rgb(var(--c-amber-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-rose-100 { background-color: color-mix(in srgb, rgb(var(--c-rose-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-violet-100 { background-color: color-mix(in srgb, rgb(var(--c-violet-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-teal-100 { background-color: color-mix(in srgb, rgb(var(--c-teal-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-sky-100 { background-color: color-mix(in srgb, rgb(var(--c-sky-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-emerald-100 { background-color: color-mix(in srgb, rgb(var(--c-emerald-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-brand-100 { background-color: color-mix(in srgb, rgb(var(--c-brand-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .bg-indigo-100 { background-color: color-mix(in srgb, rgb(var(--c-indigo-200)) 45%, rgb(var(--c-slate-50))); }
+html.dark .shadow-soft,
+html.dark .shadow-md,
+html.dark .shadow-sm {
+  box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+}
+/* Teks berwarna 700 terlalu gelap di latar gelap: naikkan ke 300 agar tetap terbaca */
+html.dark .text-brand-700,
+html.dark .t-kicker,
+html.dark .text-sky-700,
+html.dark .text-violet-700,
+html.dark .text-teal-700,
+html.dark .text-amber-700,
+html.dark .text-rose-700,
+html.dark .text-indigo-700,
+html.dark .text-emerald-700,
+html.dark .text-blue-700,
+html.dark .text-orange-700,
+html.dark .text-pink-700,
+html.dark .text-cyan-700 {
+  color: rgb(var(--c-brand-300));
+}
+html.dark .text-sky-700 { color: rgb(var(--c-sky-300)); }
+html.dark .text-violet-700 { color: rgb(var(--c-violet-300)); }
+html.dark .text-teal-700 { color: rgb(var(--c-teal-300)); }
+html.dark .text-amber-700 { color: rgb(var(--c-amber-300)); }
+html.dark .text-rose-700 { color: rgb(var(--c-rose-300)); }
+html.dark .text-indigo-700 { color: rgb(var(--c-indigo-300)); }
+html.dark .text-emerald-700 { color: rgb(var(--c-emerald-300)); }
+html.dark .text-blue-700 { color: rgb(var(--c-blue-300)); }
+html.dark .text-orange-700 { color: rgb(var(--c-orange-300)); }
+html.dark .text-pink-700 { color: rgb(var(--c-pink-300)); }
+html.dark .text-cyan-700 { color: rgb(var(--c-cyan-300)); }
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* =====================================================================
+   SISTEM DESAIN ATLAX
+   Satu sumber untuk tombol, kartu, label, judul, dan status.
+   Pakai kelas-kelas ini, jangan menulis ukuran huruf dan warna baru di setiap layar.
+   ===================================================================== */
+
+@layer components {
+  /* ---------- Tombol ---------- */
+  .btn {
+    @apply inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-2xl px-5 py-3 text-base font-bold transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-slate-300 bg-white text-slate-900 hover:border-brand-500 hover:text-brand-700;
+  }
+  .btn-soft {
+    @apply btn bg-brand-50 text-brand-800 hover:bg-brand-100;
+  }
+  .btn-success {
+    @apply btn bg-emerald-700 text-white hover:bg-emerald-800;
+  }
+  .btn-danger {
+    @apply btn bg-rose-700 text-white hover:bg-rose-800;
+  }
+  .btn-sm {
+    @apply min-h-[2.5rem] rounded-xl px-3.5 py-2 text-sm;
+  }
+
+  /* ---------- Kartu ---------- */
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white p-6;
+  }
+  .card-lift {
+    @apply card transition-colors duration-200 hover:border-brand-300;
+  }
+
+  /* ---------- Label status (chip) ---------- */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold;
+  }
+  .chip-info {
+    @apply chip bg-sky-100 text-sky-900;
+  }
+  .chip-ok {
+    @apply chip bg-emerald-100 text-emerald-900;
+  }
+  .chip-warn {
+    @apply chip bg-amber-100 text-amber-950;
+  }
+  .chip-bad {
+    @apply chip bg-rose-100 text-rose-900;
+  }
+  .chip-neutral {
+    @apply chip bg-slate-100 text-slate-800;
+  }
+
+  /* ---------- Judul dan teks (ukuran tetap) ---------- */
+  .t-kicker {
+    @apply text-sm font-extrabold uppercase tracking-wider text-brand-700;
+  }
+  .t-page {
+    font-family: var(--font-display, Outfit), system-ui, sans-serif;
+    @apply text-3xl font-black leading-tight tracking-tight text-slate-900;
+  }
+  .t-section {
+    font-family: var(--font-display, Outfit), system-ui, sans-serif;
+    @apply text-2xl font-extrabold leading-snug text-slate-900;
+  }
+  .t-card {
+    font-family: var(--font-display, Outfit), system-ui, sans-serif;
+    @apply text-xl font-bold leading-snug text-slate-900;
+  }
+  .t-body {
+    @apply text-base leading-relaxed text-slate-800;
+  }
+  .t-label {
+    @apply text-sm font-bold text-slate-800;
+  }
+  .t-note {
+    @apply text-sm leading-relaxed text-slate-600;
+  }
+  .t-result {
+    font-family: var(--font-display, Outfit), system-ui, sans-serif;
+    @apply text-4xl font-black tracking-tight text-slate-900;
+  }
+
+  /* ---------- Isian (input, select, textarea) ---------- */
+  .field {
+    @apply block min-h-[3rem] w-full rounded-2xl border-2 border-slate-300 bg-white px-4 py-2 text-base font-semibold leading-6 text-slate-900 transition-all duration-200 placeholder:font-medium placeholder:text-slate-500 hover:border-slate-400;
+  }
+  .field:focus {
+    @apply border-brand-500 outline-none ring-4 ring-brand-100;
+  }
+  .field:disabled {
+    @apply cursor-not-allowed bg-slate-100 text-slate-500;
+  }
+}
+
+/* =====================================================================
+   ANIMASI DAN INTERAKSI
+   ===================================================================== */
+
+@keyframes atlax-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes atlax-pop {
+  0% { transform: scale(0.96); }
+  60% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+
+@keyframes atlax-slide-in {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes atlax-bar {
+  0% { transform: scaleX(0); opacity: 1; }
+  80% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+
+@keyframes atlax-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes atlax-shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out backwards;
+}
+
+.module-enter {
+  animation: atlax-slide-in 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+/* Garis progres singkat di atas konten saat modul dipilih */
+.nav-progress {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 50;
+  background: rgb(var(--c-brand-600)); transform-origin: left center;
+  animation: atlax-bar 0.7s ease-out forwards; pointer-events: none;
+}
+
+
+.landing-card {
+  animation: atlax-fade-up 0.5s ease-out backwards;
+}
+
+.float-soft {
+  animation: atlax-float 5s ease-in-out infinite;
+}
+
+/* Tombol dan tautan memberi umpan balik saat disentuh */
+button:not(:disabled),
+[role='button'],
+[role='tab'],
+summary,
+label[for] {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+summary:focus-visible,
+[role='button']:focus-visible {
+  outline: 3px solid rgba(53, 88, 224, 0.55);
+  outline-offset: 2px;
+}
+
+/* Pesan status muncul dengan animasi */
+[role='status'],
+[role='alert'] {
+  animation: atlax-pop 0.3s ease-out backwards;
+}
+
+/* Kartu dan panel bergerak sedikit saat disorot kursor */
+main .card,
+main .rounded-3xl {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Hormati pengaturan pengguna yang mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar tipis dan lembut */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a5b4fc;
+}
+
+/* =====================================================================
+   CETAK
+   Area cetak tidak memakai animasi, efek transparan, atau filter
+   ===================================================================== */
+@media print {
+  #root,
+  #root * {
+    filter: none !important;
+    backdrop-filter: none !important;
+  }
+  main,
+  main > section,
+  main > div,
+  section,
+  .module-enter,
+  .module-enter * {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .print-area table tr,
+  .print-area .border-slate-200 {
+    page-break-inside: avoid;
+  }
+  .print-area {
+    position: static !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+}
+
+/* ---------- Interaksi lebih hidup ---------- */
+
+/* Isi modul masuk satu per satu */
+.module-enter > * { animation: atlax-rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+.module-enter > *:nth-child(2) { animation-delay: 0.05s; }
+.module-enter > *:nth-child(3) { animation-delay: 0.1s; }
+.module-enter > *:nth-child(4) { animation-delay: 0.15s; }
+.module-enter > *:nth-child(5) { animation-delay: 0.2s; }
+@keyframes atlax-rise {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Kartu naik sedikit saat disorot, dan panah di dalamnya ikut bergerak */
+.lift { transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease; }
+.lift:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -18px rgba(15, 23, 42, 0.35); }
+.lift:hover .arrow-move { transform: translateX(4px); }
+.arrow-move { transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
+/* Kartu beranda: naik sedikit saat disentuh, tanpa goyang. Diam saat tidak disentuh. */
+.bento > * {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+.bento > *:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -18px rgba(15, 23, 42, 0.35);
+}
+/* Ukuran dasar: di HP sedikit lebih kecil supaya lebih banyak tertata di layar. Pengaturan Tampilan tetap berlaku. */
+html { font-size: calc(16px * var(--ui-scale, 1)); }
+@media (max-width: 639px) {
+  html { font-size: calc(14.5px * var(--ui-scale, 1)); }
+}

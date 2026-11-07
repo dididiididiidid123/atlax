@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9fbe6"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep navy tile -->
+  <rect width="512" height="512" rx="112" fill="#0b2545"/>
+
+  <!-- Coin: face, reeded edge, and inner ring -->
+  <circle cx="256" cy="200" r="150" fill="#123a66"/>
+  <circle cx="256" cy="200" r="166" fill="none" stroke="#86efac" stroke-width="14" stroke-dasharray="5 9"/>
+  <circle cx="256" cy="200" r="140" fill="none" stroke="#86efac" stroke-opacity="0.35" stroke-width="4"/>
+
+  <!-- Leaf inside the coin -->
+  <g transform="translate(256 200) scale(0.6) translate(-256 -256)">
+    <g transform="rotate(45 256 256)">
+      <path d="M256 420 V 466" stroke="#86efac" stroke-width="14" stroke-linecap="round"/>
+      <path fill="url(#leaf)" d="M256 88 C 376 170 376 342 256 424 C 136 342 136 170 256 88 Z"/>
+      <path d="M256 130 V 386" stroke="#123a66" stroke-width="12" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="256" y="436" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="70" letter-spacing="14" fill="#e6fbef">ATLAX</text>
+</svg>

@@ -1,0 +1,5 @@
+[functions.secure-data]
+verify_jwt = true
+
+[functions.tax-reminders]
+verify_jwt = false

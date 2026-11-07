@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="512" x2="512" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d2c4f"/>
+      <stop offset="1" stop-color="#0f4c81"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="104" x2="0" y2="408" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6ee7b7"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background tile -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Faint tax hints: receipt/document lines and a percent sign (very low opacity) -->
+  <g opacity="0.13" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round">
+    <rect x="352" y="64" width="96" height="124" rx="14"/>
+    <path d="M374 102 H426 M374 128 H426 M374 154 H404"/>
+  </g>
+  <text x="44" y="206" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="96" fill="#ffffff" opacity="0.10">%</text>
+
+  <!-- Leaf-shaped letter A -->
+  <path fill="url(#leaf)" d="
+    M256 104
+    C 322 168 392 268 392 408
+    L 326 408
+    C 318 322 296 270 256 232
+    C 216 270 194 322 186 408
+    L 120 408
+    C 120 268 190 168 256 104 Z"/>
+
+  <!-- Crossbar -->
+  <path fill="url(#leaf)" d="M190 330 H322 V352 H190 Z"/>
+
+  <!-- Leaf midrib (vein) cut into the apex -->
+  <path d="M256 150 V226" stroke="#0d2c4f" stroke-width="10" stroke-linecap="round"/>
+</svg>

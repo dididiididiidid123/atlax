@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <defs>
+    <linearGradient id="atlax-bg" x1="0" y1="512" x2="512" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f64b8"/>
+      <stop offset="1" stop-color="#2b9af5"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon (scaled 160/512) -->
+  <g transform="translate(0,0) scale(0.3125)">
+    <rect width="512" height="512" rx="112" fill="url(#atlax-bg)"/>
+    <g fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M136 384 L256 128 L376 384"/>
+      <path d="M190 296 H322"/>
+    </g>
+    <circle cx="388" cy="124" r="56" fill="#34d399" stroke="#ffffff" stroke-width="12"/>
+    <path d="M364 124 L381 141 L412 110" fill="none" stroke="#ffffff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="184" y="98" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="800" font-size="84" letter-spacing="3" fill="#0f172a">ATLAX</text>
+  <text x="188" y="130" font-family="Segoe UI, Inter, Arial, sans-serif" font-weight="500" font-size="22" fill="#64748b">Make Tax Reporting Simpler</text>
+</svg>

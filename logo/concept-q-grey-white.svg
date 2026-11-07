@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="100" x2="0" y2="412" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Charcoal grey tile -->
+  <rect width="512" height="512" rx="96" fill="#1f2329"/>
+
+  <!-- Leaf-shaped letter A -->
+  <path fill="url(#leaf)" d="
+    M256 100
+    C 300 146 356 240 356 412
+    L 298 412
+    C 294 330 282 280 256 238
+    C 230 280 218 330 214 412
+    L 156 412
+    C 156 240 212 146 256 100 Z"/>
+
+  <!-- Crossbar -->
+  <path fill="url(#leaf)" d="M196 322 H316 V344 H196 Z"/>
+
+  <!-- Midrib, in tile colour -->
+  <path d="M256 150 V 226" stroke="#1f2329" stroke-width="10" stroke-linecap="round"/>
+</svg>
